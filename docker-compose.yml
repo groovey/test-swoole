@@ -1,0 +1,30 @@
+# This is going to be your local working both admin, api, etc.
+version: "3.9"
+
+# Networking
+networks:
+    test:
+        driver: bridge
+
+# Volumes
+volumes:
+    MYSQL:
+        driver: local
+
+services:    
+    swoole:
+        image: swoole:1.0
+        build:
+            context: ./ 
+            dockerfile: Dockerfile
+        container_name: swoole
+        restart: unless-stopped
+        tty: true
+        working_dir: /var/www/html/app
+        volumes:
+            - ./app:/var/www/html/app
+        ports:
+          - "8101:8101"
+        networks:
+            - test
+       
