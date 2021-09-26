@@ -4,12 +4,7 @@ version: "3.9"
 # Networking
 networks:
     test:
-        driver: bridge
-
-# Volumes
-volumes:
-    MYSQL:
-        driver: local
+        driver: bridge 
 
 services:    
     swoole:
