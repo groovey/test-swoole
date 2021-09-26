@@ -20,9 +20,9 @@ services:
         container_name: swoole
         restart: unless-stopped
         tty: true
-        working_dir: /var/www/html/app
+        working_dir: /var/www/html
         volumes:
-            - ./app:/var/www/html/app
+            - ./:/var/www/html
         ports:
           - "8101:8101"
         networks:

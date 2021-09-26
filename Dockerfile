@@ -5,7 +5,9 @@ RUN apt-get update
 RUN apt-get install vim -y && \
     apt-get install openssl -y && \
     apt-get install libssl-dev -y && \
-    apt-get install wget -y 
+    apt-get install wget -y && \
+    apt-get install zip -y && \
+    apt-get install unzip -y 
 
 # RUN cd /tmp && wget https://pecl.php.net/get/swoole-4.2.9.tgz && \
 #     tar zxvf swoole-4.2.9.tgz && \
