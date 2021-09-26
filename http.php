@@ -20,4 +20,16 @@ $http->on("request", function (Request $request, Response $response) {
     $response->end("Hello, World!\n");
 });
 
+// $http->reload(true);
+
+
+$http->on('WorkerStart', function ($serv, $workerId) {
+    // Files which won't be reloaded
+    // var_dump(get_included_files());
+
+    // Include files from here so they can be reloaded...
+});
+
+
+
 $http->start();
