@@ -9,14 +9,6 @@ RUN apt-get install vim -y && \
     apt-get install zip -y && \
     apt-get install unzip -y 
 
-# RUN cd /tmp && wget https://pecl.php.net/get/swoole-4.2.9.tgz && \
-#     tar zxvf swoole-4.2.9.tgz && \
-#     cd swoole-4.2.9  && \
-#     phpize  && \
-#     ./configure  --enable-openssl && \
-#     make && make install
-
-
 RUN cd /tmp && wget https://pecl.php.net/get/swoole-4.7.1.tgz && \
     tar zxvf swoole-4.7.1.tgz && \
     cd swoole-4.7.1  && \
@@ -30,6 +22,6 @@ RUN touch /usr/local/etc/php/conf.d/swoole.ini && \
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-EXPOSE 8101
+EXPOSE 8000
 CMD ["/usr/local/bin/php", "/var/www/html/server.php"]
 # CMD ["php-fpm"]
