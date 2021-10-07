@@ -8,7 +8,7 @@ use Swoole\WebSocket\Frame;
 $server = new Server("0.0.0.0", 8000);
 
 $server->on("Start", function (Server $server) {
-    echo "Swoole WebSocket Server is started at http://127.0.0.1:9502\n";
+    echo "Swoole WebSocket Server is started at http://localhost:8000\n";
 });
 
 $server->on('Open', function (Server $server, Request $request) {
