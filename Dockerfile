@@ -23,5 +23,5 @@ RUN touch /usr/local/etc/php/conf.d/swoole.ini && \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 EXPOSE 8080
-CMD ["/usr/local/bin/php", "/var/www/html/server.php"]
-# CMD ["php-fpm"]
+# CMD ["/usr/local/bin/php", "/var/www/html/server.php"]
+CMD ["php-fpm"]
