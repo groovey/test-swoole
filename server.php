@@ -24,7 +24,7 @@ $server->on('Close', function (Server $server, int $fd) {
     echo "connection close: {$fd}\n";
 });
 
-$server->on('Disconnect', function (Server $server, int $fd) {
+$server->on('Disconnect', function ($server, int $fd) {
     echo "connection disconnect: {$fd}\n";
 });
 
