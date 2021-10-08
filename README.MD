@@ -8,6 +8,6 @@ chrome://net-internals/#sockets
 
 
 ```cli
-var webSocket = new WebSocket('ws://localhost:8000');
+var webSocket = new WebSocket('ws://localhost:8080');
 webSocket.onmessage = function(data) { console.log(data); }
 ```
